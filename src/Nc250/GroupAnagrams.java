@@ -20,11 +20,11 @@ public class GroupAnagrams {
             groupedStringsMap.put(sortedString, stringList);
         }
 
-        List<List<String>> groupAnagramsList = new ArrayList<>();
+        /*List<List<String>> groupAnagramsList = new ArrayList<>();
         for(Map.Entry<String, List<String>> entry : groupedStringsMap.entrySet()) {
             groupAnagramsList.add(entry.getValue());
-        }
+        }*/
 
-        return groupAnagramsList;
+        return new ArrayList<>(groupedStringsMap.values());
     }
 }
