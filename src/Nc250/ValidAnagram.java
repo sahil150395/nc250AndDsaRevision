@@ -8,14 +8,14 @@ public class ValidAnagram {
         System.out.println(isAnagramUsingArray("racecar", "carrace"));
     }
 
-    public static boolean isAnagram(String s, String t) {
-        if(s.length() != t.length())
+    private static boolean isAnagram(String s, String t) {
+        if (s.length() != t.length())
             return false;
 
         HashMap<Character, Integer> sFrequency = new HashMap<>();
         HashMap<Character, Integer> tFrequency = new HashMap<>();
 
-        for(int i = 0; i < s.length(); i++) {
+        for (int i = 0; i < s.length(); i++) {
             sFrequency.put(s.charAt(i), sFrequency.getOrDefault(s.charAt(i), 0) + 1);
             tFrequency.put(t.charAt(i), tFrequency.getOrDefault(t.charAt(i), 0) + 1);
         }
@@ -23,8 +23,8 @@ public class ValidAnagram {
         return sFrequency.equals(tFrequency);
     }
 
-    public static boolean isAnagramUsingArray(String s, String t) {
-        if(s.length() != t.length())
+    private static boolean isAnagramUsingArray(String s, String t) {
+        if (s.length() != t.length())
             return false;
 
         int[] frequencyArray = new int[26]; // since these are alphabets there will be  maximum of 26 characters

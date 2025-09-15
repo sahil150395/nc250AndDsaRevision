@@ -8,7 +8,7 @@ public class MajorityElement {
         System.out.println(majorityElement(new int[]{5, 5, 1, 1, 1, 5, 5}));
     }
 
-    public static int majorityElement(int[] nums) {
+    private static int majorityElement(int[] nums) {
         int res = 0, maxCount = 0;
 
         HashMap<Integer, Integer> frequency = new HashMap<>();

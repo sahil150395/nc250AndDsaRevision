@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class ContainsDuplicate {
-    public boolean hasDuplicate(int[] nums) {
+    private boolean hasDuplicate(int[] nums) {
 
         //this approach is faster as compared to using streams
         Set<Integer> seen = new HashSet<>();
