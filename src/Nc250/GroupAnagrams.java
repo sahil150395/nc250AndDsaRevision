@@ -7,7 +7,7 @@ public class GroupAnagrams {
         System.out.println(groupAnagrams(new String[]{"act","pots","tops","cat","stop","hat"}));
     }
 
-    public static List<List<String>> groupAnagrams(String[] strs) {
+    private static List<List<String>> groupAnagrams(String[] strs) {
 
         HashMap<String, List<String>> groupedStringsMap = new HashMap<>();
 

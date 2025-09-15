@@ -2,7 +2,7 @@ package Nc250;
 
 public class ConcatenationOfArray {
 
-    public static int[] getConcatenation(int[] nums) {
+    private static int[] getConcatenation(int[] nums) {
         int[] ans = new int[2 * nums.length];
         int idx = 0;
 
