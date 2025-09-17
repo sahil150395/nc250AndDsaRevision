@@ -15,7 +15,7 @@ public class MergeSort {
     Only drawback of merge sort as compared to selection and insertion sort is that it requires making
     complete copies of the array, whereas the other two sort the array in place.
     If space is a tight constraint for you then merge sort may not be an option for sorting.
-    Its running time is O(nlogn) as compared to running time of O(n2) of the other two search algos.
+    Its running time is O(nlogn) worst case as compared to running time of O(n2) of the other two search algos.
     */
 
     public static void mergeSort(int[] inputArray) {
