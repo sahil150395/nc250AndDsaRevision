@@ -2,7 +2,11 @@ package Nc250;
 
 public class ProductsofArrayExceptSelf {
 
-    public int[] productExceptSelf(int[] nums) {
+    public static void main(String[] args) {
+        productExceptSelfUsingPrefixPostFix(new int[]{1,2,3,4});
+    }
+
+    public static int[] productExceptSelf(int[] nums) {
 
         /*
          * brute force solution will be to loop over the entire array and
@@ -25,7 +29,7 @@ public class ProductsofArrayExceptSelf {
     }
 
 
-    public int[] productExceptSelfUsingDivide(int[] nums) {
+    public static int[] productExceptSelfUsingDivide(int[] nums) {
         /*
          * find the entire product and divide by the current element
          * */
@@ -51,6 +55,30 @@ public class ProductsofArrayExceptSelf {
             } else {
                 result[idx] = product / nums[idx];
             }
+        }
+
+        return result;
+    }
+
+    public static int[] productExceptSelfUsingPrefixPostFix(int[] nums) {
+        /*
+         * find the entire product and divide by the current element
+         * */
+
+        int arrlength = nums.length;
+        int[] result = new int[arrlength];
+
+        // first get the prefix products in the rsultant array
+        result[0] = 1;
+        for (int idx = 1; idx < arrlength; idx++) {
+            result[idx] = result[idx - 1] * nums[idx - 1];
+        }
+
+        // now need the products of the postfix in the same result array
+        int postFix = 1;
+        for (int idx = arrlength - 1; idx >= 0; idx--) {
+            result[idx] *= postFix;
+            postFix *= nums[idx];
         }
 
         return result;
