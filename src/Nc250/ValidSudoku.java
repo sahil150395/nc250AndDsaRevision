@@ -1,11 +1,14 @@
 package Nc250;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
 public class ValidSudoku {
 
     public static void main(String[] args) {
-        System.out.println(isValidSudoku(new char[][]{{'1', '2', '.', '.', '3', '.', '.', '.', '.'},
+        System.out.println(isValidSudokuUsingMaps(new char[][]{{'1', '2', '.', '.', '3', '.', '.', '.', '.'},
                 {'4', '.', '.', '5', '.', '.', '.', '.', '.'},
                 {'.', '9', '8', '.', '.', '.', '.', '.', '3'},
                 {'5', '.', '.', '.', '6', '.', '.', '.', '4'},
@@ -51,6 +54,34 @@ public class ValidSudoku {
                     if (seen.contains(board[row][col])) return false;
                     seen.add(board[row][col]);
                 }
+            }
+        }
+
+        return true;
+    }
+
+    public static boolean isValidSudokuUsingMaps(char[][] board) {
+        Map<Integer, Set<Character>> cols = new HashMap<>();
+        Map<Integer, Set<Character>> rows = new HashMap<>();
+        Map<String, Set<Character>> squares = new HashMap<>();
+
+        for (int row = 0; row < 9; row++) {
+            for (int col = 0; col < 9; col++) {
+                if (board[row][col] == '.') continue;
+
+                String squareKey = (row / 3) + "," + (col / 3);
+
+                if (rows.computeIfAbsent(row, k -> new HashSet<>()).contains(board[row][col]) ||
+                        cols.computeIfAbsent(col, k -> new HashSet<>()).contains(board[row][col]) ||
+                        squares.computeIfAbsent(squareKey, k -> new HashSet<>()).contains(board[row][col])) {
+                    return false;
+                }
+
+                rows.get(row).add(board[row][col]);
+                cols.get(col).add(board[row][col]);
+                squares.get(squareKey).add(board[row][col]);
+
+
             }
         }
 
