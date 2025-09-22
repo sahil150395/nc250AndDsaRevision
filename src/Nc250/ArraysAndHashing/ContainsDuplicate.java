@@ -1,6 +1,5 @@
-package Nc250;
+package Nc250.ArraysAndHashing;
 
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 

@@ -1,4 +1,4 @@
-package Nc250;
+package Nc250.ArraysAndHashing;
 
 import java.util.*;
 
