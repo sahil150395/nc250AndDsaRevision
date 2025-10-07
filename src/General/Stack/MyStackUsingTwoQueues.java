@@ -15,8 +15,8 @@ public class MyStackUsingTwoQueues {
     }
 
     public void push(int x) {
-        q2.offer(x);
-        while(!q1.isEmpty()) {
+        q2.offer(x); // in a queue offer add the element to the last of the queue
+        while (!q1.isEmpty()) {
             q2.offer(q1.poll());
         }
 
@@ -26,11 +26,11 @@ public class MyStackUsingTwoQueues {
     }
 
     public int pop() {
-        return q1.poll();
+        return q1.poll(); // in a queue poll removes the head of the queue
     }
 
     public int top() {
-        return q1.peek();
+        return q1.peek(); // in a queue peek returns the value head of the queue
     }
 
     public boolean empty() {
