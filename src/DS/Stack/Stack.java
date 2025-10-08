@@ -1,4 +1,4 @@
-package General.Stack;
+package DS.Stack;
 
 public class Stack {
 

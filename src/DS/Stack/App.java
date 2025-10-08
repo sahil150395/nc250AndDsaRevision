@@ -1,4 +1,4 @@
-package General.Stack;
+package DS.Stack;
 
 public class App {
 
@@ -13,6 +13,13 @@ public class App {
             System.out.println(theStack.pop());
         }*/
         System.out.println(reverseString("hello"));
+
+        MyStackUsingOneQueue testStack = new MyStackUsingOneQueue();
+        testStack.push(1);
+        testStack.push(2);
+        testStack.push(3);
+        testStack.push(4);
+        testStack.push(5);
     }
 
     public static String reverseString(String str) {
