@@ -20,6 +20,21 @@ public class App {
         testStack.push(3);
         testStack.push(4);
         testStack.push(5);
+
+
+        MinimumStack minStack = new MinimumStack();
+        minStack.push(1);
+        minStack.push(2);
+        minStack.push(3);
+        minStack.push(1);
+        minStack.push(1);
+        minStack.push(4);
+        minStack.push(1);
+        minStack.pop();
+        minStack.pop();
+        minStack.pop();
+        minStack.pop();
+
     }
 
     public static String reverseString(String str) {
