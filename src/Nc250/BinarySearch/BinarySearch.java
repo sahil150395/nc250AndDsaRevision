@@ -29,7 +29,15 @@ public class BinarySearch {
          * Space complexity: O(1)
          */
         while (left <= right) {
-            int mid = (left + right) / 2;
+            /*
+             * alternative way to fnd the mid
+             * int mid = left + ((right-left) /2)
+             * Using left + (right - left) / 2 prevents integer overflow,
+             * which can happen with (left + right) / 2 when left and right are large.
+             * */
+            //int mid = (left + right) / 2;
+            int mid = left + ((right - left) / 2);
+
             if (target > nums[mid]) {
                 left = mid + 1;
             } else if (target < nums[mid]) {
