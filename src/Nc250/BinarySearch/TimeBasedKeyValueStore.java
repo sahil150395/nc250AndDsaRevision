@@ -5,6 +5,13 @@ import java.util.*;
 public class TimeBasedKeyValueStore {
 
     /*
+     * My approach is to use the ke as the key if a hashmap, and then within that hashmap
+     * I want to have a list of values which is a pair of timestamp as the key and the value
+     * as the value of the pair. My initial approach used a Treemap ad it maintains the sorted order
+     * base on the natural ordering of the keys.
+     * */
+
+    /*
      * LinkedHashMap: Maintains the insertion order of elements. When iterating over a LinkedHashMap, elements are
      * returned in the order they were added.
      *
