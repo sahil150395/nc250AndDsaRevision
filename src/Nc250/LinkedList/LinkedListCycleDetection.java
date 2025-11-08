@@ -28,6 +28,8 @@ public class LinkedListCycleDetection {
      * 5. If the slow and fast pointer meet means there is a cycle
      * 6. We are guaranteed that both the pointer meet is because with each iteration the distance between
      * the two pointers reduces and they finally meet
+     * 7. If our linked list has a cycle, our fast pointer will eventually catch
+     * up to the slow pointer as it will never become null.
      * Time complexity: O(n)
      * Space complexity: O(1)
      * */
