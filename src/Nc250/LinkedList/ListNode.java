@@ -25,4 +25,12 @@ public class ListNode {
     public void setVal(int val) {
         this.val = val;
     }
+
+    @Override
+    public String toString() {
+        return "ListNode{" +
+                "val=" + val +
+                ", next=" + next +
+                '}';
+    }
 }
