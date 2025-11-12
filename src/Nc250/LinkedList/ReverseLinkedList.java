@@ -11,7 +11,7 @@ public class ReverseLinkedList {
         node2.next = node3;
         node3.next = node4;
 
-        System.out.println(reverseList(node1).getVal());
+        System.out.println(reverseList(node1).val);
 
     }
 
