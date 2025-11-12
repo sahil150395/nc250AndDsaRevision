@@ -1,7 +1,7 @@
 package Nc250.LinkedList;
 
 public class ListNode {
-    private int val;
+    int val;
     ListNode next;
 
     public ListNode() {
@@ -16,14 +16,6 @@ public class ListNode {
     public ListNode(int val, ListNode next) {
         this.val = val;
         this.next = next;
-    }
-
-    public int getVal() {
-        return val;
-    }
-
-    public void setVal(int val) {
-        this.val = val;
     }
 
     @Override
